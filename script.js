@@ -37,7 +37,7 @@ var symbols = window.confirm("Do you want symbols");
   console.log(symbols)
   if (symbols == true)
   
-if ( !lowerCase === false && !upperCase === false && !numbers === false && !symbols === false) {
+if (lowerCase === false && upperCase === false && numbers === false && symbols === false) {
   alert("At least one character needs to be selected");
 }
 return ("");
