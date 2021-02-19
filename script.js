@@ -1,14 +1,18 @@
 // Assignment code here
 console.log("lowerCase")
 
+
 var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var symbols = ["!", "@", "#", "$", "%", "^", "&", "*", "()"]
-const choices = lowerCase.concat(upperCase, numbers, symbols);
-console.log(choices)
+const choices = [];
 
-var password = "";
+var confirmLower;
+var confirmUpper;
+var confirmNumbers;
+var confirmSymbols;
+console.log(choices)
 
 console.log("upperCase")
 
@@ -25,31 +29,42 @@ function generatePassword() {
   }
 
 
-  var lowerCase = window.confirm("Do you want lower case letters");
+  confirmLower = window.confirm("Do you want lower case letters");
   console.log(lowerCase)
-  if (lowerCase == true) { };
+  if (lowerCase == true) {
+    choices = [lowerCase]
+  };
 
-  var upperCase = window.confirm("Do you want upper case letters");
+  confirmUpper = window.confirm("Do you want upper case letters");
   console.log(upperCase)
-  if (upperCase == true) { };
+  if (upperCase == true) {
+    choices = [upperCase]
+   };
 
-  var numbers = window.confirm("Do you want numbers");
+  confrimNumbers = window.confirm("Do you want numbers");
   console.log(numbers)
-  if (numbers == true) { };
+  if (numbers == true) {
+    choices = [numbers]
+   };
 
-  var symbols = window.confirm("Do you want symbols");
+  confrimSymbols = window.confirm("Do you want symbols");
   console.log(symbols)
-  if (symbols == true) { };
+  if (symbols == true) { 
+    choices = [symbols]
+  };
 
-  if (lowerCase === false && upperCase === false && numbers === false && symbols === false) {
+  if (confirmLower === false && confirmUpper === false && confrimNumbers === false && confrimSymbols === false) {
     alert("At least one character needs to be selected");
   }
   console.log("checking", (lowerCase === false && upperCase === false && numbers === false && symbols === false))
+  console.log(choices)
   return ("");
 
 }
 
-for (var i = 0; i < length.length; i++) {
+var password = "";
+
+for (var i = 0; i < choices.length; i++) {
   var password = Math.floor(Math.random() * choices.length);
 }
 
