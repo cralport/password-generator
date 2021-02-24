@@ -59,26 +59,26 @@ function generatePassword() {
     alert("At least one character needs to be selected");
     return ("");
 
-  }
-
+  };
 
   console.log("checking", (lowerCase === false && upperCase === false && numbers === false && symbols === false))
   console.log(choices)
 
   var password = "";
+  
+
   console.log("password")
   console.log(choices.length)
-  for (var i = 0; i < length; i++) {
+  
+  for (var i = 0; i < length; i++) { 
+    var char = Math.floor(Math.random() * choices.length);   
     password += (choices[char])
-    var char = Math.floor(Math.random() * choices.length);
-    console.log("what is char", choices[char])
-  }
+    console.log(char);
+    console.log(choices[char])
+  };
   return (password);
 
-
-
-}
-
+};
 
 
 
